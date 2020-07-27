@@ -50,9 +50,18 @@ public class ResourceCentreTest {
 	}
 	@Test
 	public void addChromebookTest() {
-		//fail("Not yet implemented");
-		// write your code here
-	}
+	    // fail("Not yet implemented");
+	    // write your code here
+	    assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
+
+	    ResourceCentre.addChromebook(chromebookList, cb1);
+	    assertEquals("Test if that Chromebook arraylist size is 1?", 1, chromebookList.size());
+
+	    assertSame("Test that Chromebook is added same as 1st item of the list?", cb1, chromebookList.get(0));
+
+	    ResourceCentre.addChromebook(chromebookList, cb2);
+	    assertEquals("Test that Chromebook arraylist size is 2?", 2, chromebookList.size());
+	  }
 	
 	@Test
 	public void retrieveAllCamcorderTest() {
@@ -80,9 +89,26 @@ public class ResourceCentreTest {
 	}
 	@Test
 	public void retrieveAllChromebookTest() {
-		//fail("Not yet implemented");
-		// write your code here
-	}
+	    // fail("Not yet implemented");
+	    // write your code here
+
+	    assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
+
+	    String allChromebook = ResourceCentre.retrieveAllChromebook(chromebookList);
+	    String testOutput = "";
+	    assertEquals("Check that ViewAllChromebooklist", testOutput, allChromebook);
+
+	    ResourceCentre.addChromebook(chromebookList, cb1);
+	    ResourceCentre.addChromebook(chromebookList, cb2);
+	    assertEquals("Test if that Chromebook arraylist size is 2?", 2, chromebookList.size());
+
+	    allChromebook = ResourceCentre.retrieveAllChromebook(chromebookList);
+
+	    testOutput = String.format("%-10s %-30s %-10s\n", "CB0011", "My Google Chromebook 1st", "Mac OS");
+	    testOutput += String.format("%-10s %-30s %-10s\n", "CB0012", "SAMSUNG Chromebook 4+", "Win 10");
+
+	    assertEquals("Check that ViewAllChromebooklist", testOutput, allChromebook);
+	  }
 
 	@Test
 	public void doLoanCamcorderTest() {
