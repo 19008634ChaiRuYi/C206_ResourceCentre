@@ -142,7 +142,7 @@ public class ResourceCentre {
 		 output += retrieveAllCamcorder(camcorderList);	
 		System.out.println(output);
 	}
-
+//
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
 		// write your code here
