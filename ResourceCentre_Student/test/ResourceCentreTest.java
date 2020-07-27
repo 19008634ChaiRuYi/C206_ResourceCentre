@@ -114,8 +114,30 @@ public class ResourceCentreTest {
 	public void doLoanCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		
+		ResourceCentre.viewAllCamcorder(camcorderList);
+	    String tag = Helper.readString("Enter asset tag > ");
+	    String due = Helper.readString("Enter due date > ");
+	    boolean checkAvailable = false;
+	    boolean isLoaned = false;
+	    for (int i = 0; i < camcorderList.size();i++) {
+	      if (tag.contentEquals(camcorderList.get(i).getAssetTag()) && camcorderList.get(i).getIsAvailable() == true) {
+	        camcorderList.get(i).setIsAvailable(false);
+	        camcorderList.get(i).setDueDate(due);
+	        isLoaned = true;
+	      } else if (tag.contentEquals(camcorderList.get(i).getAssetTag()) && camcorderList.get(i).getIsAvailable() == false) {
+	        checkAvailable = true;
+	      }
+	    }
+	    if (isLoaned == false) {
+	      System.out.println("Invalid asset tag");
+	    } else if (checkAvailable = true) {
+	      System.out.println("Camcorder is unavailable");
+	    }else {
+	      System.out.println("Camcorder " + tag + " loaned out");
+	    }
+	  
 	}
+	//
 	
 	@Test
 	public void doLoanChromebookTest() {
