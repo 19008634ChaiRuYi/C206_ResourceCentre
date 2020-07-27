@@ -52,7 +52,7 @@ public class ResourceCentreTest {
 	public void addChromebookTest() {
 		// fail("Not yet implemented");
 		// write your code here
-		// Izharfan
+		
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 
 		ResourceCentre.addChromebook(chromebookList, cb1);
@@ -94,7 +94,6 @@ public class ResourceCentreTest {
 	public void retrieveAllChromebookTest() {
 		// fail("Not yet implemented");
 		// write your code here
-		// Izharfan
 
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 
