@@ -149,10 +149,7 @@ public class ResourceCentreTest {
 	public void doReturnCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
-<<<<<<< HEAD
-		//boundary
-=======
->>>>>>> branch 'master' of https://github.com/19008634ChaiRuYi/C206_ResourceCentre.git
+
 		
 	}
 	@Test
